@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes circle{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url('http://p4.music.126.net/tIv-E1Sc-EpoJL0M4mLcaw==/109951163024375283.jpg')
+}
+
+.disc-container {
+  position: relative;
+}
+
+.disc-container .pointer {
+  width: 25.6vw;
+  position: absolute;
+  left: 46.5vw;
+}
+
+.disc-container .disc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18.3vw;
+}
+
+.disc-container .disc .ring {
+  width: 79.2vw;
+}
+
+.disc-container .disc .light {
+  width: 79.2vw;
+  position: absolute;
+}
+
+.disc-container .disc .cover {
+  width: 49.8vw;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.disc-container.playing .disc .light,
+.disc-container.playing .disc .cover {
+  animation: circle 20s infinite linear;
+}
+
+.disc-container .disc .icon-wrap {
+  width: 15vw;
+  height: 15vw;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disc-container .disc .icon-wrap .icon {
+  width: 8.4vw;
+  fill: white;
+}
+
+.disc-container .icon-pause {
+  display: none;
+}
+
+.disc-container.playing .icon-pause {
+  display: block;
+}
+
+.disc-container.playing .icon-play {
+  display: none;
+}
+
+.song-container {
+  flex: 1;
+  padding: 0 9.3vw;
+  margin-top: 6.7vw;
+  color: #fefefe;
+  text-align: center;
+}
+
+.song-container h2 {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.song-container .lyric-view {
+  height: 90px;
+  line-height: 1.5;
+  margin-top: 3.73vw;
+  overflow: hidden;
+}
+
+.song-container .lyric-view .lyric p {
+  padding-bottom: 1.6vw;
+  color: rgba(255,255,255,.6)
+}
+
+.song-container .lyric-view .lyric p.active {
+  color: white;
+}
+
+.page > .links {
+  display: flex;
+  padding: 0 9.3vw;
+  justify-content: center;
+  margin-bottom: 5.3vw;
+}
+
+.page > .links a {
+  width: 33.6vw;
+  height: 12.8vw;
+  line-height: 12.8vw;
+  border: 1px solid #d43b32;
+  border-radius: 4px;
+  color: #d43b32;
+  font-size: 18px;
+  padding: 0 1.6vw;
+  text-align: center;
+}
+
+.page .links .btnDownload {
+  margin-left: 3.2vw;
+  background-color: #d43b32;
+  color: white;
+}
