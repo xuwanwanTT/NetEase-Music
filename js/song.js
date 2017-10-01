@@ -1,15 +1,15 @@
 const $disC = $('.disc-container')
 let audio = document.createElement('audio')
 
-$.ajax({
-  url: './sources/song.json',
-  method: 'get'
-}).done(function(data){
-  console.log(data)
-})
-  .fail(function(){
-    alert('error')
-  })
+// $.ajax({
+//   url: './sources/song.json',
+//   method: 'get'
+// }).done(function(data){
+//   console.log(data)
+// })
+//   .fail(function(){
+//     alert('error')
+//   })
 
 audio.oncanplay = function(){
   audio.play()

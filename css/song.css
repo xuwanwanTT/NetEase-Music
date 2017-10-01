@@ -9,6 +9,20 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;   
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
 }
@@ -29,60 +43,58 @@ a {
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background: url('https://p4.music.126.net/tIv-E1Sc-EpoJL0M4mLcaw==/109951163024375283.jpg')
 }
 
 .disc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 63px;
   position: relative;
 }
 
 .disc-container .pointer {
-  width: 25.6vw;
+  width: 84px;
   position: absolute;
-  left: 46.5vw;
+  top: -63px;
+  left: 50%;
+  margin-left: -12px;
   z-index: 1;
 }
 
-.disc-container .disc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 18.3vw;
-  position: relative;
+.disc-container .ring {
+  width: 248px;
 }
 
-.disc-container .disc .ring {
-  width: 79.2vw;
-}
-
-.disc-container .disc .light {
-  width: 79.2vw;
+.disc-container .light {
+  width: 248px;
   position: absolute;
   animation: circle 20s infinite linear;
   animation-play-state: paused;
 }
 
-.disc-container .disc .cover {
-  width: 49.8vw;
+.disc-container .cover {
+  width: 156px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -24.9vw;
-  margin-left: -24.9vw;
+  margin-top: -78px;
+  margin-left: -78px;
   border-radius: 50%;
   animation: circle 20s infinite linear;
   animation-play-state: paused;
 }
 
-.disc-container.playing .disc .light,
-.disc-container.playing .disc .cover {
+.disc-container.playing .light,
+.disc-container.playing .cover {
   animation-play-state: running;
 }
 
-.disc-container .disc .icon-wrap {
-  width: 15vw;
-  height: 15vw;
+.disc-container .icon-wrap {
+  width: 50px;
+  height: 50px;
   border: 1px solid white;
   border-radius: 50%;
   position: absolute;
@@ -94,9 +106,9 @@ a {
   align-items: center;
 }
 
-.disc-container .disc .icon-wrap .icon {
-  width: 8.4vw;
-  height: 8.4vw;
+.disc-container .icon-wrap .icon {
+  width: 60%;
+  height: 60%;
   fill: white;
 }
 
@@ -115,25 +127,30 @@ a {
 .song-container {
   flex: 1;
   padding: 0 9.3vw;
-  margin-top: 6.7vw;
+  margin-top: 25px;
   color: #fefefe;
   text-align: center;
 }
 
 .song-container h2 {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.1;
+  color: #fefefe;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .song-container .lyric-view {
-  height: 90px;
+  height: 72px;
   line-height: 1.5;
-  margin-top: 3.73vw;
+  margin-top: 14px;
   overflow: hidden;
 }
 
 .song-container .lyric-view .lyric p {
-  padding-bottom: 1.6vw;
+  font-size: 13px;
+  padding-bottom: 5px;
   color: rgba(255,255,255,.6)
 }
 
@@ -145,24 +162,99 @@ a {
   display: flex;
   padding: 0 9.3vw;
   justify-content: center;
-  margin-bottom: 5.3vw;
+  margin-bottom: 20px;
 }
 
 .page > .links a {
   flex: 1;
-  height: 11.2vw;
-  line-height: 11.2vw;
   border: 1px solid #d43b32;
   border-radius: 4px;
   color: #d43b32;
-  font-size: 18px;
-  padding: 0 1.6vw;
+  font-size: 15px;
   text-align: center;
-  letter-spacing: .5em;
+  padding: 7px 6px;
 }
 
 .page .links .btnDownload {
-  margin-left: 3.2vw;
+  margin-left: 12px;
   background-color: #d43b32;
   color: white;
+}
+
+@media screen and (min-width: 360px) {
+  .song-container .lyric-view {
+    height: 96px;
+  }
+
+  .song-container h2 {
+    font-size: 18px;
+  }
+
+  .song-container .lyric-view .lyric p {
+    font-size: 16px;
+    padding-bottom: 8px;
+  }
+
+  .disc-container {
+    margin-top: 70px;
+  }
+
+  .disc-container .pointer {
+      width: 96px;
+      top: -70px;
+      margin-left: -17px;
+  }
+  .disc-container .ring,
+  .disc-container .light {
+    width: 296px;
+  }
+
+  .disc-container .cover {
+    width: 188px;
+    margin-left: -94px;
+    margin-top: -94px;
+  }
+
+  .disc-container .icon-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
+  .page > .links a {
+    font-size: 18px;
+    padding: 8px 6px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+
+  .disc-container {
+    margin-top: 80px;
+  }
+
+  .disc-container .pointer {
+      width: 110px;
+      top: -80px;
+      margin-left: -22px;
+  }
+  .disc-container .ring,
+  .disc-container .light {
+    width: 342px;
+  }
+
+  .disc-container .cover {
+    width: 216px;
+    margin-left: -108px;
+    margin-top: -108px;
+  }
+
+  .disc-container .icon-wrap {
+    width: 65px;
+    height: 65px;
+  }
+
+  .page > .links a {
+    font-size: 20px;
+    padding: 10px 6px;
+  }
 }
