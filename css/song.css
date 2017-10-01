@@ -48,6 +48,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 18.3vw;
+  position: relative;
 }
 
 .disc-container .disc .ring {
