@@ -30,7 +30,7 @@ a {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: url('http://p4.music.126.net/tIv-E1Sc-EpoJL0M4mLcaw==/109951163024375283.jpg')
+  background: url('https://p4.music.126.net/tIv-E1Sc-EpoJL0M4mLcaw==/109951163024375283.jpg')
 }
 
 .disc-container {
@@ -57,17 +57,21 @@ a {
 .disc-container .disc .light {
   width: 79.2vw;
   position: absolute;
+  animation: circle 20s infinite linear;
+  animation-play-state: paused;
 }
 
 .disc-container .disc .cover {
   width: 49.8vw;
   position: absolute;
   border-radius: 50%;
+  animation: circle 20s infinite linear;
+  animation-play-state: paused;
 }
 
 .disc-container.playing .disc .light,
 .disc-container.playing .disc .cover {
-  animation: circle 20s infinite linear;
+  animation-play-state: running;
 }
 
 .disc-container .disc .icon-wrap {
@@ -135,15 +139,16 @@ a {
 }
 
 .page > .links a {
-  width: 33.6vw;
-  height: 12.8vw;
-  line-height: 12.8vw;
+  flex: 1;
+  height: 11.2vw;
+  line-height: 11.2vw;
   border: 1px solid #d43b32;
   border-radius: 4px;
   color: #d43b32;
   font-size: 18px;
   padding: 0 1.6vw;
   text-align: center;
+  letter-spacing: .5em;
 }
 
 .page .links .btnDownload {
