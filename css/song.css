@@ -41,6 +41,7 @@ a {
   width: 25.6vw;
   position: absolute;
   left: 46.5vw;
+  z-index: 1;
 }
 
 .disc-container .disc {
@@ -65,6 +66,10 @@ a {
 .disc-container .disc .cover {
   width: 49.8vw;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -24.9vw;
+  margin-left: -24.9vw;
   border-radius: 50%;
   animation: circle 20s infinite linear;
   animation-play-state: paused;
@@ -81,6 +86,9 @@ a {
   border: 1px solid white;
   border-radius: 50%;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +96,7 @@ a {
 
 .disc-container .disc .icon-wrap .icon {
   width: 8.4vw;
+  height: 8.4vw;
   fill: white;
 }
 
