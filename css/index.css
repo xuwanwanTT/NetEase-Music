@@ -158,7 +158,7 @@ section.art {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(https://s3.music.126.net/m/s/img/recommand_bg_2x.png?d045faf…) no-repeat;
+  background: url(../sources/bg1.png) no-repeat;
   background-size: 100% 100%;
 }
 
