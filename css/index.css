@@ -34,6 +34,15 @@ section > h2:first-child {
   font-size: 17px;
 }
 
+.loading {
+  display: block;
+  margin: 0 auto;
+}
+
+.loading.active {
+  display: none;
+}
+
 .topBar {
   background: #d43c33;
   height: 64px;
@@ -89,8 +98,16 @@ section > h2:first-child {
   padding: 0 5px;
 }
 
-.playLists {
+.tabContent > li {
   padding-top: 123px;
+  display: none;
+}
+
+.tabContent > li.active {
+  display: block;
+}
+
+.playLists {
   padding-bottom: 21px;
 }
 
