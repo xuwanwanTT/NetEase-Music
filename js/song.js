@@ -44,11 +44,6 @@ $(function(){
     let audio = document.createElement('audio')
 
     audio.src = url
-
-    audio.oncanplay = function(){
-      audio.play()
-      $disC.addClass('playing')
-    }
     
     $('.icon-play').on('click',function(){
       audio.play()
