@@ -44,7 +44,10 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: url('https://p4.music.126.net/tIv-E1Sc-EpoJL0M4mLcaw==/109951163024375283.jpg')
+  background-image: url('https://p4.music.126.net/tIv-E1Sc-EpoJL0M4mLcaw==/109951163024375283.jpg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
 
 .disc-container {

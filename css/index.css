@@ -119,31 +119,32 @@ section > h2:first-child {
   line-height: 1.2;
 }
 
-.lastestMusice {}
+.lastestMusic {}
 
-.lastestMusice > ol > li {
+.lastestMusic > ol > li {
   position: relative;
   padding: 6px 10px;
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
-.lastestMusice > ol > li h3 {
+.lastestMusic > ol > li h3 {
   font-size: 17px;
 }
 
-.lastestMusice > ol > li p {
-  font-size: 13.5px;
+.lastestMusic > ol > li p {
+  font-size: 12px;
   color: #888;
 }
 
-.lastestMusice > ol > li .icon-sq {
-  width: 10px;
-  height: 10px;
+.lastestMusic > ol > li .icon-sq {
+  width: 12px;
+  height: 12px;
   position: relative;
-  top: 3px;
+  top: 4px;
+  margin-right: 4px;
 }
 
-.lastestMusice > ol > li .icon-play {
+.lastestMusic > ol > li .icon-play {
   display: block;
   position: absolute;
   top: 50%;
