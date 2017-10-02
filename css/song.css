@@ -155,6 +155,10 @@ a {
   overflow: hidden;
 }
 
+.song-container .lyric-view .lyric {
+  transition: .3s;
+}
+
 .song-container .lyric-view .lyric p {
   font-size: 13px;
   padding-bottom: 5px;

@@ -53,7 +53,27 @@ $(function(){
     $('.icon-pause').on('click',function(){
       audio.pause()
       $disC.removeClass('playing')
-    }) 
+    })
+
+    let playSong = setInterval(()=>{
+      let munites = ~~(audio.currentTime/60)
+      let seconds = audio.currentTime - munites*60
+      let time = `${pad(munites)}:${pad(seconds)}`
+      let $pTime = $('.lyric p')
+      let $lyric = $('.lyric')
+      for(var i = 0; i < $pTime.length; i++){
+        if($pTime[i+1] !== undefined && $pTime.eq(i).attr('data-time') < time && time < $pTime.eq(i+1).attr('data-time')){
+          $pTime.eq(i).addClass('active').siblings().removeClass('active')
+          let pTop = $pTime.eq(i).offset().top -$('.lyric').offset().top - $pTime.innerHeight()
+          $lyric.css('transform',`translateY(-${pTop}px)`)
+          break
+        }
+      }
+    },500)
+
+    function pad(number){
+      return number >= 10 ? '' + number : '0' + number
+    }
   }
 
 })
