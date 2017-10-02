@@ -52,6 +52,9 @@ $(function(){
     
     $('.icon-pause').on('click',function(){
       audio.pause()
+      let siteImg = $('.cover').css('transform')
+      let siteWp = $('.circleWp').css('transform')
+      $('.circleWp').css('transform',siteWp === 'none'?siteImg:siteImg.concat(' ',siteWp))
       $disC.removeClass('playing')
     })
 

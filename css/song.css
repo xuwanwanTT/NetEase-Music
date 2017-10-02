@@ -32,9 +32,6 @@ a {
 }
 
 @keyframes circle{
-  0% {
-    transform: rotate(0deg);
-  }
   100% {
     transform: rotate(360deg)
   }
@@ -78,8 +75,10 @@ a {
   left: 50%;
   margin-top: -124px;
   margin-left: -124px;
-  animation: circle 20s infinite linear;
-  animation-play-state: paused;
+}
+
+.disc-container .circleWp {
+  position: absolute;
 }
 
 .disc-container .cover {
@@ -90,13 +89,11 @@ a {
   margin-top: -78px;
   margin-left: -78px;
   border-radius: 50%;
-  animation: circle 20s infinite linear;
-  animation-play-state: paused;
 }
 
 .disc-container.playing .light,
 .disc-container.playing .cover {
-  animation-play-state: running;
+  animation: circle 20s infinite linear;
 }
 
 .disc-container .icon-wrap {
