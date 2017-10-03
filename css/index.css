@@ -138,22 +138,26 @@ section > h2:first-child {
 
 .lastestMusic {}
 
-.lastestMusic > ol > li {
+.lastestMusic > ol > li,
+.hotMusic > ol > li {
   position: relative;
   padding: 6px 10px;
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
-.lastestMusic > ol > li h3 {
+.lastestMusic > ol > li h3,
+.hotMusic > ol > li h3 {
   font-size: 17px;
 }
 
-.lastestMusic > ol > li p {
+.lastestMusic > ol > li p,
+.hotMusic > ol > li p {
   font-size: 12px;
   color: #888;
 }
 
-.lastestMusic > ol > li .icon-sq {
+.lastestMusic > ol > li .icon-sq,
+.hotMusic > ol > li .icon-sq {
   width: 12px;
   height: 12px;
   position: relative;
@@ -161,7 +165,8 @@ section > h2:first-child {
   margin-right: 4px;
 }
 
-.lastestMusic > ol > li .icon-play {
+.lastestMusic > ol > li .icon-play,
+.hotMusic > ol > li .icon-play {
   display: block;
   position: absolute;
   top: 50%;
@@ -203,4 +208,110 @@ section.art a {
   margin-bottom: 20px;
  }
 
+ .intro {
+   position: relative;
+ }
 
+ .intro > .hotCover {
+  width: 100%;
+  margin-top: -20px;
+ }
+
+ .intro > .hotText {
+    width: 142px;
+    height: 67px;
+    position: absolute;
+    top: -4px;
+    left: 20px;
+ }
+
+ .intro > .hotDate {
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   font-size: 12px;
+   color: rgba(255,255,255,.7);
+ }
+
+ .searchMusic > .search {
+  padding: 15px 10px;
+  margin-top: -20px;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+ }
+
+.searchMusic > .search > .icon-search {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+ }
+
+ .searchMusic > .search > input {
+   width: 100%;
+   height: 30px;
+   padding: 0 30px;
+   border: 0;
+   border-radius: 30px;
+   outline: none;
+   background: #ebecec;
+ }
+
+ .searchMusic > .result {
+   padding: 0 10px;
+ }
+
+ .searchMusic > .result > h3 {
+   font-size: 12px;
+   color: #666;
+   padding: 10px 0;
+ }
+
+ .searchMusic > .result > .recommend {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+ }
+
+ .searchMusic > .result > .recommend li {
+   height: 32px;
+   line-height: 32px;
+   padding: 0 14px;
+   margin: 0 8px 8px 0;
+   border: 1px solid rgba(0,0,0,.1);
+   border-radius: 32px;
+   font-size: 14px;
+   color: #333;
+ }
+
+ .searchMusic > .result > .resulted li {
+   position: relative;
+   padding: 13px 0px;
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+   margin-left: 30px;
+ }
+
+ .searchMusic > .result > .resulted li a {
+   display: flex;
+   align-items: center;
+ }
+
+ .searchMusic > .result > .resulted li h3 {
+   font-size: 14px;
+ }
+
+ .searchMusic > .result > .resulted li .history {
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   left: -30px;
+ }
+
+ .searchMusic > .result > .resulted li .delete {
+   width: 13px;
+   height: 13px;
+   position: absolute;
+   right: 10px;
+ }
