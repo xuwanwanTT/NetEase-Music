@@ -34,8 +34,48 @@ $(function(){
     }
   })
 
+  let timer = undefined
+  $('.search input').on('input',function(e){
+    if(!e.target.value){$('.result').addClass('active').siblings().removeClass('active')}
+    else{
+      $('.resultInput').addClass('active').siblings().removeClass('active')
+      let keyword = e.target.value
+      $('.status h3').text(`搜索“${keyword}”`)
+      clearTimeout(timer)
+      timer = setTimeout(function(){
+        serach(keyword).then(s=>{
+          console.log(s)
+          $('.resultInput .resulted').html('')
+          s.map(k=>{
+            let html = `<li><a href="#">
+            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path fill-rule="evenodd" fill="#c9c9ca" d="M25.181,23.535l-1.414,1.414l-7.315-7.314   C14.709,19.107,12.46,20,10,20C4.477,20,0,15.523,0,10C0,4.477,4.477,0,10,0c5.523,0,10,4.477,10,10c0,2.342-0.811,4.49-2.16,6.195   L25.181,23.535z M10,2c-4.418,0-8,3.582-8,8s3.582,8,8,8c4.418,0,8-3.582,8-8S14.418,2,10,2z"/></svg>
+            <h3>${k}</h3></a></li>`
+            $('.resultInput .resulted').append($(html))
+          })
+        })
+      },500)
+      
+    }
+  })
+
+  function serach(keyword){
+    return new Promise((resolve,reject)=>{
+      let arr = ["小半","我们不一样","我的天空","偶像","青春住了谁"]
+      let result = arr.filter(function(s){
+        return s.indexOf(keyword) >= 0
+      })
+      setTimeout(function(){
+        resolve(result)
+      },(Math.random()*1000 + 300))
+    })
+  }
+
   function searchData(data){
-    let html = ``
+    let $recommend = $('.recommend')
+    data.map(s=>{
+      let html = `<li><a href="#">${s.name}</a></li>`
+      $recommend.append($(html))
+    })
   }
 
   function HotData(data,index){

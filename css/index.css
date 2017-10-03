@@ -259,20 +259,26 @@ section.art a {
    background: #ebecec;
  }
 
- .searchMusic > .result {
-   padding: 0 10px;
+ .searchMusic > .result,
+ .searchMusic > .resultInput {
+   display: none;
+ }
+
+ .searchMusic > .active {
+   display: block;
  }
 
  .searchMusic > .result > h3 {
    font-size: 12px;
    color: #666;
-   padding: 10px 0;
+   padding: 10px;
  }
 
  .searchMusic > .result > .recommend {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  padding: 0 10px;
  }
 
  .searchMusic > .result > .recommend li {
@@ -293,7 +299,8 @@ section.art a {
    margin-left: 30px;
  }
 
- .searchMusic > .result > .resulted li a {
+ .searchMusic > .result > .resulted li a,
+ .searchMusic > .resultInput > .resulted li a {
    display: flex;
    align-items: center;
  }
@@ -306,12 +313,40 @@ section.art a {
    width: 15px;
    height: 15px;
    position: absolute;
-   left: -30px;
+   left: -20px;
  }
 
  .searchMusic > .result > .resulted li .delete {
    width: 13px;
    height: 13px;
    position: absolute;
-   right: 10px;
+   right: 15px;
+ }
+
+ .searchMusic > .resultInput > .status h3 {
+   height: 50px;
+   font-size: 15px;
+   color: #507daf;
+   margin-left: 10px;
+   line-height: 50px;
+   border-bottom: 1px solid rgba(0,0,0,.1);
+ }
+
+ .searchMusic > .resultInput > .resulted li {
+  position: relative;
+  padding: 13px 0px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-left: 30px;
+ }
+
+ .searchMusic > .resultInput > .resulted li h3 {
+   font-size: 15px;
+   flex: 1;
+ }
+
+ .searchMusic > .resultInput > .resulted li .icon-search {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -20px;
  }
