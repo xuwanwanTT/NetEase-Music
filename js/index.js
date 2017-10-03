@@ -2,7 +2,7 @@ $(function(){
   $.get('./sources/index.json').then(function(response){
     let data = response
     let arr = data.map(s=>{
-      let html = '<li><a href="./song.html?id=' + (data.indexOf(s) + 1) + '"' + '><h3>' + s.name + '</h3><p>' + (parseInt(s.sq) === 1?'<svg class="icon icon-sq" aria-hidden="true"><use xlink:href="#icon-sq"></use></svg>':'') + s.singer + '-' + s.name + '</p><svg class="icon icon-play" aria-hidden="true"><use xlink:href="#icon-play1"></use></svg></a></li>'
+      let html = '<li><a href="./song.html?id=' + (data.indexOf(s) + 1) + '"' + '><h3 class="hiddWord">' + s.name + '</h3><p class="hiddWord">' + (parseInt(s.sq) === 1?'<svg class="icon icon-sq" aria-hidden="true"><use xlink:href="#icon-sq"></use></svg>':'') + s.singer + '-' + s.name + '</p><svg class="icon icon-play" aria-hidden="true"><use xlink:href="#icon-play1"></use></svg></a></li>'
       $('.lastestMusic ol .loading').addClass('active')
       $('.lastestMusic ol').append($(html))
     })
@@ -60,7 +60,7 @@ $(function(){
 
   function serach(keyword){
     return new Promise((resolve,reject)=>{
-      let arr = ["小半","我们不一样","我的天空","偶像","青春住了谁"]
+      let arr = ["小半","我们不一样","我的天空","偶像","青春住了谁","带你去旅行","全部都是你"]
       let result = arr.filter(function(s){
         return s.indexOf(keyword) >= 0
       })
@@ -78,13 +78,20 @@ $(function(){
     })
   }
 
+  /*${parseInt(s.sq) === 1?'<svg class="icon icon-sq" aria-hidden="true"><use xlink:href="#icon-sq"></use></svg>:''}*/
+
   function HotData(data,index){
     let {hotCover, hotText, date, song} = data[0]
     let html = `<img class="hotCover" src="${hotCover}" alt="热歌榜封面">
       <img class="hotText" src="${hotText}" alt="热歌榜文字">
       <p class="hotDate">${date}</p>`
     song.map(s=>{
-      let songList = '<li><a href="./song.html?id=' + (song.indexOf(s) + 1) + '"' + '><h3>' + s.name + '</h3><p>' + (parseInt(s.sq) === 1?'<svg class="icon icon-sq" aria-hidden="true"><use xlink:href="#icon-sq"></use></svg>':'') + s.singer + '-' + s.name + '</p><svg class="icon icon-play" aria-hidden="true"><use xlink:href="#icon-play1"></use></svg></a></li>'
+      let songList = `<li><a href="./song.html?id=${song.indexOf(s)+1}">
+        <span class="rank">${'0' + (song.indexOf(s)+1)}</span>
+        <h3 class="hiddWord">${s.name}</h3>
+        <p class="hiddWord">${parseInt(s.sq) === 1?'<svg class="icon icon-sq" aria-hidden="true"><use xlink:href="#icon-sq"></use></svg>':''}${s.singer}-${s.name}</p>
+        <svg class="icon icon-play" aria-hidden="true"><use xlink:href="#icon-play1"></use></svg>
+        </a></li>`
       $('.tabContent > li > ol').append($(songList))
     })
     $('.intro').append($(html))

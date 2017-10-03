@@ -37,6 +37,13 @@ a {
   }
 }
 
+.hiddWord {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: normal;
+}
+
 .page {
   display: flex;
   flex-direction: column;

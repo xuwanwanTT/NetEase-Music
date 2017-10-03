@@ -34,7 +34,7 @@ $(function(){
     var arr1 = arr.map(s=>s.match(reg))
     arr1.map(s=>{
       if(!s){return}
-      let $p = $('<p></p>')
+      let $p = $('<p class="hiddWord"></p>')
       $p.attr('data-time',s[1]).text(s[2])
       $lyric.append($p)
     })

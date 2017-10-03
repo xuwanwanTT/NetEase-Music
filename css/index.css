@@ -43,6 +43,13 @@ section > h2:first-child {
   display: none;
 }
 
+.hiddWord {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: normal;
+}
+
 .topBar {
   background: #d43c33;
   height: 64px;
@@ -52,6 +59,7 @@ section > h2:first-child {
   padding: 10px;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .topBar .logo {
@@ -80,6 +88,7 @@ section > h2:first-child {
   width: 100%;
   background: white;
   top: 63px;
+  z-index: 2;
 }
 
 .siteNav > ol > li {
@@ -122,6 +131,23 @@ section > h2:first-child {
   padding-bottom: 16px;
 }
 
+.playLists > ul > li .number {
+  position: absolute;
+  display: flex;
+  background: linear-gradient(180deg,rgba(0,0,0,.2),transparent);
+  width: 33.333333%;
+  font-size: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+  padding-right: 6px;
+}
+
+.playLists > ul > li .icon-db {
+  width: 10px;
+  height: 10px;
+}
+
 .playLists > ul > li img {
   width: 100%;
 }
@@ -138,8 +164,7 @@ section > h2:first-child {
 
 .lastestMusic {}
 
-.lastestMusic > ol > li,
-.hotMusic > ol > li {
+.lastestMusic > ol > li {
   position: relative;
   padding: 6px 10px;
   border-bottom: 1px solid rgba(0,0,0,.1);
@@ -148,12 +173,14 @@ section > h2:first-child {
 .lastestMusic > ol > li h3,
 .hotMusic > ol > li h3 {
   font-size: 17px;
+  padding-right: 30px;
 }
 
 .lastestMusic > ol > li p,
 .hotMusic > ol > li p {
   font-size: 12px;
   color: #888;
+  padding-right: 30px;
 }
 
 .lastestMusic > ol > li .icon-sq,
@@ -232,6 +259,32 @@ section.art a {
    font-size: 12px;
    color: rgba(255,255,255,.7);
  }
+
+ .hotMusic > ol > li {
+  position: relative;
+  padding: 6px 10px 6px 40px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.hotMusic > ol > li .rank {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 17px;
+  color: #999;
+}
+
+.hotMusic > ol > li:first-child .rank {
+  color: #df3436
+}
+
+.hotMusic > ol > li:nth-child(2) .rank {
+  color: #df3436
+}
+
+.hotMusic > ol > li:nth-child(3) .rank {
+  color: #df3436
+}
 
  .searchMusic > .search {
   padding: 15px 10px;
