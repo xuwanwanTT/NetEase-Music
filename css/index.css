@@ -24,6 +24,10 @@ a {
 
 body {
   color: #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 section > h2:first-child {

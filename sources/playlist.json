@@ -1,0 +1,54 @@
+[
+  {
+    "discribtion":"偶尔不想太嗨\n就把自己丢进沙发里\n听最温柔的歌\n让情绪舒缓 身体放空\n其实 这样也可以很安逸…\n\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n粤语、非热门\n\n封面：张艺上。",
+    "name":"粤语┆用最温柔的歌，放空自己…",
+    "tags":["粤语", "流行"],
+    "lister":"虚玩玩",
+    "imger":"./sources/imger1.ico",
+    "listcover":"./sources/listcover.jpg",
+    "song":[
+      {
+        "id":"1",
+        "name":"小半",
+        "singer":"陈粒",
+        "sq":"1"
+      },
+      {
+        "id":"2",
+        "name":"我们不一样",
+        "singer":"大壮",
+        "sq":"1"
+      },
+      {
+        "id":"3",
+        "name":"我的天空",
+        "singer":"南征北战NZBZ",
+        "sq":"0"
+      },
+      {
+        "id":"4",
+        "name":"偶像",
+        "singer":"金玟岐",
+        "sq":"0"
+      },
+      {
+        "id":"5",
+        "name":"青春住了谁",
+        "singer":"杨丞琳",
+        "sq":"0"
+      },
+      {
+        "id":"6",
+        "name":"带你去旅行",
+        "singer":"校长",
+        "sq":"0"
+      },
+      {
+        "id":"7",
+        "name":"全部都是你",
+        "singer":"Dragon Pig/CNBALLER/CLOUD WANG",
+        "sq":"0"
+      }
+    ] 
+  }
+]
