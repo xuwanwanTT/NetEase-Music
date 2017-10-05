@@ -44,18 +44,28 @@ $(function(){
     let audio = document.createElement('audio')
 
     audio.src = url
-    
-    $('.icon-play').on('click',function(){
+
+    $(audio).on('canplay',function(){
       audio.play()
+    })
+
+    $(audio).on('playing',function(){
       $disC.addClass('playing')
     })
-    
-    $('.icon-pause').on('click',function(){
-      audio.pause()
+
+    $(audio).on('pause',function(){
       let siteImg = $('.cover').css('transform')
       let siteWp = $('.circleWp').css('transform')
       $('.circleWp').css('transform',siteWp === 'none'?siteImg:siteImg.concat(' ',siteWp))
       $disC.removeClass('playing')
+    })
+    
+    $('.icon-play').on('click',function(){
+      audio.play()
+    })
+    
+    $('.icon-pause').on('click',function(){
+      audio.pause()
     })
 
     let playSong = setInterval(()=>{

@@ -135,7 +135,7 @@ section > h2:first-child {
   position: absolute;
   display: flex;
   background: linear-gradient(180deg,rgba(0,0,0,.2),transparent);
-  width: 33.333333%;
+  width: calc(33.333333% - 2px);
   font-size: 12px;
   align-items: center;
   justify-content: flex-end;
