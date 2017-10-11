@@ -43,7 +43,7 @@ $(function(){
       $('.status h3').text(`搜索“${keyword}”`)
       clearTimeout(timer)
       timer = setTimeout(function(){
-        serach(keyword).then(s=>{
+        search(keyword).then(s=>{
           console.log(s)
           $('.resultInput .resulted').html('')
           s.map(k=>{
@@ -58,7 +58,7 @@ $(function(){
     }
   })
 
-  function serach(keyword){
+  function search(keyword){
     return new Promise((resolve,reject)=>{
       let arr = ["小半","我们不一样","我的天空","偶像","青春住了谁","带你去旅行","全部都是你"]
       let result = arr.filter(function(s){
@@ -77,8 +77,6 @@ $(function(){
       $recommend.append($(html))
     })
   }
-
-  /*${parseInt(s.sq) === 1?'<svg class="icon icon-sq" aria-hidden="true"><use xlink:href="#icon-sq"></use></svg>:''}*/
 
   function HotData(data,index){
     let {hotCover, hotText, date, song} = data[0]
